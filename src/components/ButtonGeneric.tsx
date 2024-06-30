@@ -2,15 +2,19 @@ import './Components.css'
 
 interface labelInfo {
     label: string;
+    dest: string;
 }
 const ButtonGeneric = ({
     label,
+    dest,
                        }: labelInfo) => {
 
     return (
-        <div className={"genericButton"}>
+        <a href={dest}>
+        <div className={"genericButton"} onClick={() => {alert("hello!")}}>
             {label}
         </div>
+        </a>
     )
 };
 
