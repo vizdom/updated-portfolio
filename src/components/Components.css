@@ -1,4 +1,4 @@
-
+/* Button styles */
 .genericButton {
     height: 30px;
     width: 90px;
@@ -13,12 +13,14 @@
     padding: 2px 0;
 }
 
+/* Title bar styles */
 .title {
     width: inherit;
     height: 20%;
     vertical-align: top;
     text-align: center;
     color: white;
+    font-family: Arial, sans-serif;
 }
 
 .title_centered {

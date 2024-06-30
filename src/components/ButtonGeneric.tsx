@@ -10,7 +10,7 @@ const ButtonGeneric = ({
                        }: labelInfo) => {
 
     return (
-        <a href={dest}>
+        <a href={dest} style={{textDecoration: "none"}}>
         <div className={"genericButton"} onClick={() => {alert("hello!")}}>
             {label}
         </div>
