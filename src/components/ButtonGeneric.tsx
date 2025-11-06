@@ -1,4 +1,5 @@
 import './Components.css'
+import { Link } from "react-router-dom";
 
 interface labelInfo {
     label: string;
@@ -10,11 +11,11 @@ const ButtonGeneric = ({
                        }: labelInfo) => {
 
     return (
-        <a href={dest} style={{textDecoration: "none"}}>
-        <div className={"genericButton"} onClick={() => {alert("hello!")}}>
+        <Link to={dest} style={{textDecoration: "none"}}>
+        <div className={"genericButton"}>
             {label}
         </div>
-        </a>
+        </Link>
     )
 };
 

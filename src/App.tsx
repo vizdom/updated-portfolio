@@ -8,12 +8,11 @@ function App() {
   return (
     <div className="App">
         <TitleBar imgSrc={Toussaint} alt={"A Minecraft build"} text={"Owen Lacey"}></TitleBar>
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <ButtonGeneric label={"test"} dest={"test"}></ButtonGeneric>
-      </header>
+        <div className={"pageContent"}>
+            <header>
+
+            </header>
+        </div>
     </div>
   );
 }

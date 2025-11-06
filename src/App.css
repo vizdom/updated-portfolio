@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: darkslategrey;
+  color: darkgrey;
 }
 
 .App-logo {
@@ -7,15 +9,11 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  width: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +33,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.pageContent {
+  max-width: 85%;
+  margin: auto;
+  background-color: transparent;
 }

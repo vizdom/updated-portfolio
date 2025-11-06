@@ -1,4 +1,6 @@
-
+import './Components.css'
+import MenuBar from "./MenuBar";
+import React from "react";
 interface titleInfo {
     imgSrc : string;
     alt : string;
@@ -12,8 +14,10 @@ const TitleBar = ({
 
     return (
         <div className={"title"}>
-            <img src={imgSrc} alt={alt}/>
-            <div className={"title_centered"}>{text}</div>
+                <img src={imgSrc} alt={alt} className={"title_image"}/>
+                <div className={"title_centered"}>{text}</div>
+            <div className={"menu_box"}><MenuBar></MenuBar></div>
+
         </div>
     )
 };
