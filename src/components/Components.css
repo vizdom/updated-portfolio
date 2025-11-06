@@ -20,7 +20,8 @@
     width: auto;
     max-width: 80%;
     margin: auto;
-    height: 20%;
+    height: auto;
+    max-height: 20%;
     vertical-align: top;
     text-align: center;
     color: white;
@@ -30,7 +31,7 @@
 
 .title_centered {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: xx-large;
@@ -39,7 +40,8 @@
 .title_image {
     display: block;
     margin: inherit;
-    width: inherit;
+    width: auto;
+    position: relative;
 }
 
 /* Menu bar styles */
@@ -59,4 +61,23 @@
     background-color: dimgray;
 }
 
+/* Content Styles */
+
+.image_left {
+    float: left;
+    max-width: 40%;
+    height: auto;
+    margin: 50px;
+}
+
+.text_title {
+    font-size: x-large;
+    margin-top: 50px;
+}
+
+.text_image_left {
+    float: right;
+    font-size: large;
+    margin-top: 15px;
+}
 

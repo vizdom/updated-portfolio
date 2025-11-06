@@ -35,8 +35,10 @@
   }
 }
 
-.pageContent {
-  max-width: 85%;
+.page_content {
+  max-width: 80%;
   margin: auto;
   background-color: transparent;
+  display: flex;
+  justify-content: space-around;
 }

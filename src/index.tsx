@@ -7,7 +7,7 @@ import {
 
 import './index.css';
 import App from './App';
-import Class1 from "./routes/Class1";
+import GameDesign from "./routes/GameDesign";
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     },
     {
         path: "class1",
-        element: <Class1 />,
+        element: <GameDesign />,
     },
 ]);
 
