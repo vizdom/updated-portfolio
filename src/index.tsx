@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         //errorElement: <ErrorPage></ErrorPage>,
     },
     {
-        path: "class1",
+        path: "gamedesign",
         element: <GameDesign />,
     },
 ]);

@@ -5,9 +5,9 @@ const MenuBar = () => {
 
     return (
         <div className={"menu"}>
-            <ButtonGeneric label={"Class1"} dest={"class1"}></ButtonGeneric>
-            <ButtonGeneric label={"Class2"} dest={"class2"}></ButtonGeneric>
-            <ButtonGeneric label={"Class3"} dest={"class3"}></ButtonGeneric>
+            <ButtonGeneric label={"Game Design"} dest={"gamedesign"}></ButtonGeneric>
+            <ButtonGeneric label={"Writing"} dest={"writing"}></ButtonGeneric>
+            <ButtonGeneric label={"Visual Art"} dest={"visualart"}></ButtonGeneric>
         </div>
     )
 };

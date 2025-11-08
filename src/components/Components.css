@@ -20,7 +20,7 @@
     width: auto;
     max-width: 80%;
     margin: auto;
-    height: auto;
+    height: 361px;
     max-height: 20%;
     vertical-align: top;
     text-align: center;
@@ -31,7 +31,7 @@
 
 .title_centered {
     position: absolute;
-    top: 40%;
+    vertical-align: middle;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: xx-large;
