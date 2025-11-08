@@ -36,9 +36,11 @@
 }
 
 .page_content {
+  width: auto;
   max-width: 80%;
   margin: auto;
   background-color: transparent;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
 }

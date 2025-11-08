@@ -15,7 +15,7 @@ const ImageLeft = ({
                        }: textInfo) => {
 
     return (
-        <div className={"page_content"}>
+        <div className={"page_object"}>
             <img src={imgSrc} alt={alt} className={"image_left"}/>
             <div>
                 <div className={"text_title"}>{title}</div>
