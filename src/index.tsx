@@ -9,6 +9,9 @@ import './index.css';
 import App from './App';
 import GameDesign from "./routes/GameDesign";
 import reportWebVitals from './reportWebVitals';
+import VisualArt from "./routes/VisualArt";
+import Writing from "./routes/Writing";
+import DnDAdventure from "./routes/DnDAdventure";
 
 const router = createBrowserRouter([
     {
@@ -17,8 +20,24 @@ const router = createBrowserRouter([
         //errorElement: <ErrorPage></ErrorPage>,
     },
     {
-        path: "gamedesign",
+        path: "/gamedesign",
         element: <GameDesign />,
+    },
+    {
+        path: "/writing",
+        element: <Writing />,
+    },
+    {
+        path: "/visualart",
+        element: <VisualArt />,
+    },
+    {
+        path: "/writing/dndadventure",
+        element: <DnDAdventure />,
+    },
+    {
+        path: "/mobydick",
+        element: <VisualArt />,
     },
 ]);
 
