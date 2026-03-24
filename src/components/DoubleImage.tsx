@@ -8,6 +8,8 @@ interface textInfo {
     alt2: string;
     title1: string;
     title2: string;
+    link1?: string;
+    link2?: string;
 }
 const DoubleImage = ({
                         img1Src,
@@ -15,21 +17,26 @@ const DoubleImage = ({
                         alt1,
                         alt2,
                         title1,
-                        title2
+                        title2,
+                        link1,
+                        link2,
                     }: textInfo) => {
 
     return (
         <div className={"page_object"}>
             <div className={"double_image_container"}>
-                <div className={"double_image_item"}>
-                    <img src={img1Src} alt={alt1} className={"double_image"}/>
-                    <div className={"double_image_title"}>{title1}</div>
-                </div>
-                <div className={"double_image_item"}>
-                    <img src={img2Src} alt={alt2} className={"double_image"}/>
-                    <div className={"double_image_title"}>{title2}</div>
-
-                </div>
+                <a href={link1}>
+                    <div className={"double_image_item"}>
+                        <img src={img1Src} alt={alt1} className={"double_image"}/>
+                        <div className={"double_image_title"}>{title1}</div>
+                    </div>
+                </a>
+                <a href={link2}>
+                    <div className={"double_image_item"}>
+                        <img src={img2Src} alt={alt2} className={"double_image"}/>
+                        <div className={"double_image_title"}>{title2}</div>
+                    </div>
+                </a>
             </div>
         </div>
     )

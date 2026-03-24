@@ -19,11 +19,12 @@ const Writing = () => {
                     " enough to make sure it works."}></ParagraphText>
 
                 <DoubleImagePage img1Src={DnD} img2Src={MobyDick} alt1={"The first page of a DnD adventure"}
-                             alt2={"The first page of a fake Moby Dick chapter."} title1={"A Dungeons and Dragons " +
-                             "One-Shot"} title2={"The first page of a fake Moby Dick chapter."}
+                                 alt2={"The first page of a fake Moby Dick chapter."}
+                                 title1={"A Dungeons and Dragons " +
+                                     "One-Shot"} title2={"The first page of a fake Moby Dick chapter."}
                                  link1={"dndadventure"}
-                                 link2={".../public/PDFs/ImbalanceOfAHea_70a_Art_Variant.pdf"}></DoubleImagePage>
-
+                                 link2={"mobydick"}></DoubleImagePage>
+                <p className={"page_object"}>​</p>
             </div>
         </div>
     )

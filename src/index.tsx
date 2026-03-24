@@ -12,12 +12,21 @@ import reportWebVitals from './reportWebVitals';
 import VisualArt from "./routes/VisualArt";
 import Writing from "./routes/Writing";
 import DnDAdventure from "./routes/DnDAdventure";
+import MobyDickChapter from "./routes/MobyDickChapter";
+import DigitalPainting from "./routes/DigitalPainting";
+import PhotoEditing from "./routes/PhotoEditing";
+import MinecraftBuilds from "./routes/MinecraftBuilds";
+import UnderConstruction from "./routes/UnderConstruction";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App></App>,
         //errorElement: <ErrorPage></ErrorPage>,
+    },
+    {
+        path: "/construction",
+        element: <UnderConstruction />
     },
     {
         path: "/gamedesign",
@@ -36,8 +45,20 @@ const router = createBrowserRouter([
         element: <DnDAdventure />,
     },
     {
-        path: "/mobydick",
-        element: <VisualArt />,
+        path: "/writing/mobydick",
+        element: <MobyDickChapter />,
+    },
+    {
+        path: "/visualart/digitalpainting",
+        element: <DigitalPainting />,
+    },
+    {
+        path: "/visualart/photoediting",
+        element: <PhotoEditing />,
+    },
+    {
+        path: "/visualart/minecraft",
+        element: <MinecraftBuilds />,
     },
 ]);
 

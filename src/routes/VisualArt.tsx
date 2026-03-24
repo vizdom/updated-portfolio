@@ -18,13 +18,14 @@ const VisualArt = () => {
             <TitleBar imgSrc={Toussaint} alt={"A Minecraft build"} text={"Owen Lacey"}></TitleBar>
             <div className={"page_content"}>
                 <DoubleImage img1Src={BB8} img2Src={FrostSlug} alt1={"A digital drawing of BB8"} alt2={"A banana slug, " +
-                    "altered to appear made of ice"} title1={"Digital Painting"} title2={"Photo Editing"}></DoubleImage>
+                    "altered to appear made of ice"} title1={"Digital Painting"} title2={"Photo Editing"}
+                    link1={"visualart/digitalpainting"} link2={"construction"}></DoubleImage>
                 <ImageLeft imgSrc={CorvoBianco} alt={"A digital painting of Corvo Bianco from The Witcher 3."}
                            title={"Painting of Corvo Bianco"} text={"A digital painting of Corvo Bianco from The Witcher 3."}></ImageLeft>
                 <TitleText title={"Minecraft Building"} text={"A lot of the visual art I've done is building in " +
                     "Minecraft. This work is a mix of creative and survival building, and the photos were taking with " +
                     "shaders. The shaders are either Complementary or BSL shaders.\n"}
-                           link={"https://echoct21.github.io/GitHub/Minecraft/MinecraftPortfolio.pdf"}
+                           link={"minecraft"}
                            link_text={"Full Album"}></TitleText>
                 <DoubleImage img1Src={Windmills} img2Src={Tallneck} alt1={"A Minecraft build of windmills in a field."}
                              alt2={"A Minecraft build of a Tallneck from the Horizon games."} title1={"Windmills"} title2={"The Tallneck"}></DoubleImage>

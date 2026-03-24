@@ -74,6 +74,16 @@
     justify-content: inherit;
 }
 
+.pdf_display{
+    width: 90%;
+    margin: 15px;
+    box-shadow: #17231D;
+}
+
+.react-pdf__Document{
+    height: 800px;
+}
+
 .image_left {
     float: left;
     max-width: 40%;
@@ -168,6 +178,7 @@
     font-size: large;
     margin: 15px;
 }
+
 
 .link {
     font-size: large;
