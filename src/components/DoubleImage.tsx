@@ -27,14 +27,14 @@ const DoubleImage = ({
             <div className={"double_image_container"}>
                 <a href={link1}>
                     <div className={"double_image_item"}>
-                        <img src={img1Src} alt={alt1} className={"double_image"}/>
                         <div className={"double_image_title"}>{title1}</div>
+                        <img src={img1Src} alt={alt1} className={"double_image"}/>
                     </div>
                 </a>
                 <a href={link2}>
                     <div className={"double_image_item"}>
-                        <img src={img2Src} alt={alt2} className={"double_image"}/>
                         <div className={"double_image_title"}>{title2}</div>
+                        <img src={img2Src} alt={alt2} className={"double_image"}/>
                     </div>
                 </a>
             </div>

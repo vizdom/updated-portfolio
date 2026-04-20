@@ -11,11 +11,11 @@ const ButtonGeneric = ({
                        }: labelInfo) => {
 
     return (
-        <Link to={dest} style={{textDecoration: "none"}}>
+        <a href={dest}>
         <div className={"genericButton"}>
             {label}
         </div>
-        </Link>
+        </a>
     )
 };
 

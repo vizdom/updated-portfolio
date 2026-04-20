@@ -1,12 +1,14 @@
-import "../App.css";
+import "../../App.css";
 import React from "react";
 import {useState} from "react";
 import {Document, Page, pdfjs} from "react-pdf";
-import PDF from "../PDFs/PhotoEditingPDF.pdf"
-import Toussaint from "../images/ToussaintTownDetail.png";
-import TitleBar from "../components/TitleBar";
+import PDF from "../../PDFs/ImbalanceOfAHea_70a_Art_Variant.pdf"
+import TitleBar from "../../components/TitleBar";
+import Name from "../../images/Name.png";
+import Footer from "../../components/Footer";
+import ButtonGeneric from "../../components/ButtonGeneric";
 
-const PhotoEditing = () => {
+const MobyDick = () => {
     // Setup, needed to make the PDF display work at all
     pdfjs.GlobalWorkerOptions.workerSrc = new URL(
         'pdfjs-dist/build/pdf.worker.min.mjs',
@@ -34,9 +36,11 @@ const PhotoEditing = () => {
 
     return (
         <div className={"App"}>
-            <TitleBar imgSrc={Toussaint} alt={"A Minecraft build"} text={"Owen Lacey"}></TitleBar>
+            <TitleBar  logo={Name}></TitleBar>
             <div className={"page_content"}>
-                <p className={"page_object"}>​</p>
+                <div className={"page_object"}>
+                    <ButtonGeneric label={"Back"} dest={"/writing"}></ButtonGeneric>
+                </div>
                 <Document className={"page_object"} file={PDF} onLoadError={console.error}
                           onLoadSuccess={onDocumentLoadSuccess}>
                     <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false}></Page>
@@ -64,8 +68,9 @@ const PhotoEditing = () => {
                 </div>
                 <p className={"page_object"}>​</p>
             </div>
+            <Footer imgSrc={Name} alt={"Name Logo"}></Footer>
         </div>
     )
 };
 
-export default PhotoEditing;
+export default MobyDick;

@@ -1,11 +1,14 @@
-import "../App.css";
+import "../../App.css";
 import React from "react";
 import {useState} from "react";
 import {Document, Page, pdfjs} from "react-pdf";
-import PaintingPDF from "../PDFs/Owen_Lacey_DigitalPainting_Portfolio_2022.pdf"
-import ConceptPDF from "../PDFs/Owen_Lacey_ConceptArt_Portfolio_Fall2024.pdf"
-import Toussaint from "../images/ToussaintTownDetail.png";
-import TitleBar from "../components/TitleBar";
+import PaintingPDF from "../../PDFs/Owen_Lacey_DigitalPainting_Portfolio_2022.pdf"
+import ConceptPDF from "../../PDFs/Owen_Lacey_ConceptArt_Portfolio_Fall2024.pdf"
+import TitleBar from "../../components/TitleBar";
+import Name from "../../images/Name.png";
+import Footer from "../../components/Footer";
+import ButtonGeneric from "../../components/ButtonGeneric";
+import ParagraphText from "../../components/ParagraphText";
 
 const DigitalPainting = () => {
     // Setup, needed to make the PDF display work at all
@@ -48,13 +51,17 @@ const DigitalPainting = () => {
 
     return (
         <div className={"App"}>
-            <TitleBar imgSrc={Toussaint} alt={"A Minecraft build"} text={"Owen Lacey"}></TitleBar>
+            <TitleBar  logo={Name}></TitleBar>
             <div className={"page_content"}>
-
-                <Document className={'pdf_display'} file={PaintingPDF} onLoadError={console.error}
+                <div className={"page_object"}>
+                    <ButtonGeneric label={"Back"} dest={"/visualart"}></ButtonGeneric>
+                </div>
+                <div className={"pdf_display_block"}>
+                <Document file={PaintingPDF} onLoadError={console.error}
                           onLoadSuccess={onDocumentLoadSuccessA}>
                     <Page pageNumber={pageNumberA} renderTextLayer={false} renderAnnotationLayer={false}></Page>
                 </Document>
+                </div>
                 <div className={"page_object"}>
                     <div>
                         <p className={"paragraph_text"}>
@@ -64,6 +71,7 @@ const DigitalPainting = () => {
                             type="button"
                             disabled={pageNumberA <= 1}
                             onClick={previousPageA}
+                            className={"pdf_nav_button"}
                         >
                             Previous
                         </button>
@@ -71,6 +79,7 @@ const DigitalPainting = () => {
                             type="button"
                             disabled={pageNumberA >= numPagesA}
                             onClick={nextPageA}
+                            className={"pdf_nav_button"}
                         >
                             Next
                         </button>
@@ -78,10 +87,12 @@ const DigitalPainting = () => {
                 </div>
                 <p className={"page_object"}>​</p>
                 {/*Start of PDF B - Concept Art*/}
+                <div className={"pdf_display_block"}>
                 <Document className={'pdf_display'} file={ConceptPDF} onLoadError={console.error}
                           onLoadSuccess={onDocumentLoadSuccessB}>
                     <Page pageNumber={pageNumberB} renderTextLayer={false} renderAnnotationLayer={false}></Page>
                 </Document>
+                </div>
                 <div className={"page_object"}>
                     <div>
                         <p className={"paragraph_text"}>
@@ -91,6 +102,7 @@ const DigitalPainting = () => {
                             type="button"
                             disabled={pageNumberB <= 1}
                             onClick={previousPageB}
+                            className={"pdf_nav_button"}
                         >
                             Previous
                         </button>
@@ -98,13 +110,16 @@ const DigitalPainting = () => {
                             type="button"
                             disabled={pageNumberB >= numPagesB}
                             onClick={nextPageB}
+                            className={"pdf_nav_button"}
                         >
                             Next
                         </button>
                     </div>
                 </div>
                 <p className={"page_object"}>​</p>
+                <ParagraphText title={"Painting Information"} text={"I should write something here"}></ParagraphText>
             </div>
+            <Footer imgSrc={Name} alt={"Name Logo"}></Footer>
         </div>
     )
 };

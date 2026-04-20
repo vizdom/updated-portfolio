@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 interface textInfo {
     title: string;
     text: string;
-    link: string;
+    link?: string;
     link_text?: string;
 }
 
@@ -13,7 +13,7 @@ interface textInfo {
 const TitleText = ({
                         title,
                         text,
-                        link,
+                        link = "construction",
                         link_text
                     }: textInfo) => {
 

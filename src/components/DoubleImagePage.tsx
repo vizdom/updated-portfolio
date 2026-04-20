@@ -1,6 +1,5 @@
 import './Components.css'
 import '../App.css'
-import {Link} from "react-router-dom";
 
 interface textInfo {
     img1Src: string;
@@ -26,14 +25,18 @@ const DoubleImagePage = ({
     return (
         <div className={"page_object"}>
             <div className={"double_image_container"}>
+                <a href={link1}>
                 <div className={"double_image_item"}>
+                    <div className={"double_image_title"}>{title1}</div>
                     <img src={img1Src} alt={alt1} className={"double_image_page"}/>
-                    <Link to={link1}>{title1}</Link>
                 </div>
+                </a>
+                <a href={link2}>
                 <div className={"double_image_item"}>
+                    <div className={"double_image_title"}>{title2}</div>
                     <img src={img2Src} alt={alt2} className={"double_image_page"}/>
-                    <Link to={link2}>{title2}</Link>
                 </div>
+                </a>
             </div>
         </div>
     )

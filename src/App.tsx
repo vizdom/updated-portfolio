@@ -3,14 +3,15 @@ import './App.css';
 import TitleBar from "./components/TitleBar";
 import ImageLeft from "./components/ImageLeft";
 import ImageRight from "./components/ImageRight";
-import Toussaint from "./images/ToussaintTownDetail.png"
+import Name from "./images/Name.png"
 import Island from "./images/Owen_L_Color_Exterior1_V04_Oct8.png"
 import Castle from "./images/Castle.png"
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-        <TitleBar imgSrc={Toussaint} alt={"A Minecraft build"} text={"Owen Lacey"}></TitleBar>
+        <TitleBar  logo={Name}></TitleBar>
         <div className={"page_content"}>
             <ImageLeft imgSrc={Island} alt={"Concept art of submarine construction on an island."} title={"About Me"}
                        text={"Hi! I'm a game designer and writer from California. I like making short narrative games " +
@@ -21,6 +22,8 @@ function App() {
                 "game. It is based on early Minecraft adventure maps and uses both redstone mechanics and commmand blocks" +
                 "to create a fully playable game."}></ImageRight>
         </div>
+        <Footer imgSrc={Name} alt={"Name Logo"}></Footer>
+
     </div>
   );
 }

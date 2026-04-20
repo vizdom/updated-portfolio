@@ -1,12 +1,14 @@
 /* Button styles */
+
 .genericButton {
-    height: 30px;
+    height: 38px;
     width: 90px;
-    background-color: #56C0A2;
+    background-color: darkslategray;
     margin: 8px;
 
     border-radius: 10px;
-    color: #17231D;
+    color: aliceblue;
+    font-family: Palatino, serif;
     border: solid gray thin;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
@@ -45,6 +47,11 @@
     font-size: xx-large;
 }
 
+.logo {
+    width: auto;
+    max-width: 250px;
+}
+
 
 /* Menu bar styles */
 
@@ -53,6 +60,7 @@
     width: 100%;
     max-width: 1136px;
     margin: auto;
+    background-color: darkgrey;
 }
 
 .menu {
@@ -60,7 +68,51 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: dimgray;
+    margin: auto;
+
+}
+
+/* Footer Styles */
+
+.footer {
+    width: 80%;
+    max-width: 1136px;
+    max-height: 15%;
+    margin: auto;
+}
+
+.footer_content {
+    width: 100%;
+    max-width: 1136px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: darkgrey;
+}
+
+.footer_item {
+    width: 250px;
+    max-height: 80%;
+}
+
+.footer_logo {
+    width: auto;
+    height: 130px;
+}
+
+.footer_header{
+    color: #17231D;
+    font-size: large;
+    font-weight: bold;
+}
+
+.footer_text {
+    color: #17231D;
+}
+
+.linkedin {
+    width: 23px;
 }
 
 /* Content Styles */
@@ -74,11 +126,19 @@
     justify-content: inherit;
 }
 
-.pdf_display{
-    width: 90%;
-    margin: 15px;
-    box-shadow: #17231D;
+.pdf_display_block{
+    width: 100%;
+    margin-top: 40px;
+    display: inherit;
+    background: transparent;
+    justify-content: inherit;
 }
+
+.pdf_nav_button{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 
 .react-pdf__Document{
     height: 800px;
@@ -87,6 +147,7 @@
 .image_left {
     float: left;
     max-width: 40%;
+    min-width: 400px;
     height: auto;
     margin: 50px;
 }
@@ -134,7 +195,8 @@
     object-fit: cover;
     width: 350px;
     height: 350px;
-    margin: 30px;
+    margin: 40px;
+    margin-top: 10px;
 }
 
 .double_image_page{
@@ -142,7 +204,8 @@
     object-fit: cover;
     width: 350px;
     height: 457px;
-    margin: 30px;
+    margin: 40px;
+    margin-top: 10px;
 }
 
 .double_image_title{

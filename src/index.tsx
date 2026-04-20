@@ -11,11 +11,11 @@ import GameDesign from "./routes/GameDesign";
 import reportWebVitals from './reportWebVitals';
 import VisualArt from "./routes/VisualArt";
 import Writing from "./routes/Writing";
-import DnDAdventure from "./routes/DnDAdventure";
-import MobyDickChapter from "./routes/MobyDickChapter";
-import DigitalPainting from "./routes/DigitalPainting";
-import PhotoEditing from "./routes/PhotoEditing";
-import MinecraftBuilds from "./routes/MinecraftBuilds";
+import DnDAdventure from "./routes/ItemPages/DnDAdventure";
+import MobyDickChapter from "./routes/ItemPages/MobyDickChapter";
+import DigitalPainting from "./routes/ItemPages/DigitalPainting";
+import PhotoEditing from "./routes/ItemPages/PhotoEditing";
+import MinecraftBuilds from "./routes/ItemPages/MinecraftBuilds";
 import UnderConstruction from "./routes/UnderConstruction";
 
 const router = createBrowserRouter([
@@ -59,6 +59,14 @@ const router = createBrowserRouter([
     {
         path: "/visualart/minecraft",
         element: <MinecraftBuilds />,
+    },
+    {
+        path: "/gamedesign/photoclue",
+        element: <GameDesign />,
+    },
+    {
+        path: "/gamedesign/shadowdepth",
+        element: <GameDesign />,
     },
 ]);
 
