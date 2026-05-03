@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/updated-portfolio/static/css/main.a9697c6b.css",
+    "main.js": "/updated-portfolio/static/js/main.3950a734.js",
+    "static/js/453.8fab85aa.chunk.js": "/updated-portfolio/static/js/453.8fab85aa.chunk.js",
+    "static/media/MinecraftPortfolioV2.pdf": "/updated-portfolio/static/media/MinecraftPortfolioV2.295963a7980af50ad728.pdf",
+    "static/media/Owen_Lacey_ConceptArt_Portfolio_Fall2024.pdf": "/updated-portfolio/static/media/Owen_Lacey_ConceptArt_Portfolio_Fall2024.a9c80b372aea2f48b549.pdf",
+    "static/media/Tallneck.png": "/updated-portfolio/static/media/Tallneck.b3947081cbd3b5d9b3e2.png",
+    "static/media/Windmills.png": "/updated-portfolio/static/media/Windmills.a06ddc9d7b286145ea00.png",
+    "static/media/OwenL_DigitalGlazingFrost_V01.png": "/updated-portfolio/static/media/OwenL_DigitalGlazingFrost_V01.fa279ad747518e0790ae.png",
+    "static/media/PhotosAndPhysicalArt.pdf": "/updated-portfolio/static/media/PhotosAndPhysicalArt.7a45706f011a64effc4d.pdf",
+    "static/media/Castle.png": "/updated-portfolio/static/media/Castle.f02cc98fe4e78b078515.png",
+    "static/media/Owen_Lacey_DigitalPainting_Portfolio_2022.pdf": "/updated-portfolio/static/media/Owen_Lacey_DigitalPainting_Portfolio_2022.5df2d175e4300551614f.pdf",
+    "static/media/CorvoBianco.png": "/updated-portfolio/static/media/CorvoBianco.23dccfe69d2fca320ac0.png",
+    "static/media/TPC_Column.jpg": "/updated-portfolio/static/media/TPC_Column.11793e7d18350603d6cb.jpg",
+    "static/media/TPC_Goat.jpg": "/updated-portfolio/static/media/TPC_Goat.16080cd46a4ec1c72fd3.jpg",
+    "static/media/TPC_Lake.jpg": "/updated-portfolio/static/media/TPC_Lake.e05ae35a2fe3ebefe456.jpg",
+    "static/media/Owen_L_Color_Exterior1_V04_Oct8.png": "/updated-portfolio/static/media/Owen_L_Color_Exterior1_V04_Oct8.f8a098252d7eff1129e9.png",
+    "static/media/TPC_BancroftTower.jpg": "/updated-portfolio/static/media/TPC_BancroftTower.efe1669a73bd88dc8642.jpg",
+    "static/media/DNDAdventure.pdf": "/updated-portfolio/static/media/DNDAdventure.2efcf98f22f6089312ef.pdf",
+    "static/media/OwenL_SketchJournal2_Ver06 .png": "/updated-portfolio/static/media/OwenL_SketchJournal2_Ver06 .c3bfc03d4d0dc4e0be06.png",
+    "static/media/BoatDrawing.jpg": "/updated-portfolio/static/media/BoatDrawing.fb7353cb486296cc849a.jpg",
+    "static/media/TPC_BancroftArch.jpg": "/updated-portfolio/static/media/TPC_BancroftArch.cf762dfc3add7fc29555.jpg",
+    "static/media/pdf.worker.min.mjs": "/updated-portfolio/static/media/pdf.worker.min.1cbe20a51ccc46d008f1.mjs",
+    "static/media/TPC_Branch.jpg": "/updated-portfolio/static/media/TPC_Branch.525051e6e25c05f15286.jpg",
+    "static/media/ToussaintTownDetail.png": "/updated-portfolio/static/media/ToussaintTownDetail.e0682d8fd43682dad980.png",
+    "static/media/ImbalanceOfAHea_70a_Art_Variant.pdf": "/updated-portfolio/static/media/ImbalanceOfAHea_70a_Art_Variant.910f9b553a1074e1eada.pdf",
+    "static/media/LordOfSilurum.png": "/updated-portfolio/static/media/LordOfSilurum.7f977fc9ca2f546888ac.png",
+    "static/media/ImbalanceOfAHead.png": "/updated-portfolio/static/media/ImbalanceOfAHead.5f4a1eee05cb1dbd603b.png",
+    "static/media/Name.png": "/updated-portfolio/static/media/Name.cfafd4d5d59a513d1528.png",
+    "static/media/ShadowedDepths.png": "/updated-portfolio/static/media/ShadowedDepths.187af772532d687efc1a.png",
+    "static/media/AlienAdventure.png": "/updated-portfolio/static/media/AlienAdventure.e11aa5a4d084bfb2b40e.png",
+    "index.html": "/updated-portfolio/index.html",
+    "main.a9697c6b.css.map": "/updated-portfolio/static/css/main.a9697c6b.css.map",
+    "main.3950a734.js.map": "/updated-portfolio/static/js/main.3950a734.js.map",
+    "453.8fab85aa.chunk.js.map": "/updated-portfolio/static/js/453.8fab85aa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9697c6b.css",
+    "static/js/main.3950a734.js"
+  ]
+}
