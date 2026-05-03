@@ -4,7 +4,6 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-
 import './index.css';
 import App from './App';
 import GameDesign from "./routes/GameDesign";
@@ -14,9 +13,11 @@ import Writing from "./routes/Writing";
 import DnDAdventure from "./routes/ItemPages/DnDAdventure";
 import MobyDickChapter from "./routes/ItemPages/MobyDickChapter";
 import DigitalPainting from "./routes/ItemPages/DigitalPainting";
-import PhotoEditing from "./routes/ItemPages/PhotoEditing";
 import MinecraftBuilds from "./routes/ItemPages/MinecraftBuilds";
 import UnderConstruction from "./routes/UnderConstruction";
+import PhotoClue from "./routes/ItemPages/PhotoClue";
+import StoryPage from "./routes/ItemPages/StoryPage";
+import Drawing from "./routes/ItemPages/Drawing";
 
 const router = createBrowserRouter([
     {
@@ -49,12 +50,16 @@ const router = createBrowserRouter([
         element: <MobyDickChapter />,
     },
     {
+        path: "/writing/stories",
+        element: <StoryPage />,
+    },
+    {
         path: "/visualart/digitalpainting",
         element: <DigitalPainting />,
     },
     {
-        path: "/visualart/photoediting",
-        element: <PhotoEditing />,
+        path: "/visualart/drawing",
+        element: <Drawing />,
     },
     {
         path: "/visualart/minecraft",
@@ -62,7 +67,7 @@ const router = createBrowserRouter([
     },
     {
         path: "/gamedesign/photoclue",
-        element: <GameDesign />,
+        element: <PhotoClue />,
     },
     {
         path: "/gamedesign/shadowdepth",

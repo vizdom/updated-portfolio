@@ -30,7 +30,7 @@ const Footer = ({
                     </p>
                </div>
                <div className={"footer_item"}>
-                   <ButtonGeneric label={"Return to Top"} dest={"#top"}></ButtonGeneric>
+                   <ButtonGeneric label={"Return to Top"} dest={{}}></ButtonGeneric>
                </div>
            </div>
         </div>

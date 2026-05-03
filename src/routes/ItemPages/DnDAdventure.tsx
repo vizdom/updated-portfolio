@@ -1,5 +1,5 @@
 import "../../App.css";
-import React from "react";
+import React, {useEffect, useLayoutEffect} from "react";
 import {useState} from "react";
 import {Document, Page, pdfjs} from "react-pdf";
 import PDF from "../../PDFs/DNDAdventure.pdf"
@@ -7,6 +7,11 @@ import TitleBar from "../../components/TitleBar";
 import Name from "../../images/Name.png";
 import Footer from "../../components/Footer";
 import ButtonGeneric from "../../components/ButtonGeneric";
+import MenuBar from "../../components/MenuBar";
+import Spacer from "../../components/Spacer";
+
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
 
 const DnDAdventure = () => {
     // Setup, needed to make the PDF display work at all
@@ -15,6 +20,9 @@ const DnDAdventure = () => {
         import.meta.url,
     ).toString();
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const [numPages, setNumPages] = useState<number>(0);
     const [pageNumber, setPageNumber] = useState<number>(1);
@@ -34,17 +42,40 @@ const DnDAdventure = () => {
         changePage(1);
     }
 
+    function useWindowSize() {
+        const [size, setSize] = useState(0);
+        useLayoutEffect(() => {
+            function updateSize() {
+                setSize(window.innerWidth);
+            }
+            window.addEventListener('resize', updateSize);
+            updateSize();
+            return () => window.removeEventListener('resize', updateSize);
+        }, []);
+        return size;
+    }
+
+    function PDFPage () {
+        const width = useWindowSize();
+        if(width * 0.76 > 600) {
+            return <Page width={600} pageNumber={pageNumber}></Page>;
+        }
+        return <Page width={width * 0.76} pageNumber={pageNumber}></Page>;
+    }
+
     return (
         <div className={"App"}>
             <TitleBar  logo={Name}></TitleBar>
             <div className={"page_content"}>
+                <MenuBar></MenuBar>
                 <div className={"page_object"}>
                     <ButtonGeneric label={"Back"} dest={"/writing"}></ButtonGeneric>
                 </div>
                 <Document className={"page_object"} file={PDF} onLoadError={console.error}
                           onLoadSuccess={onDocumentLoadSuccess}>
-                    <Page pageNumber={pageNumber} renderTextLayer={false} renderAnnotationLayer={false}></Page>
+                    <PDFPage></PDFPage>
                 </Document>
+                <Spacer count={2}></Spacer>
                 <div className={"page_object"}>
                     <div>
                         <p className={"paragraph_text"}>

@@ -7,6 +7,7 @@ import TitleBar from "../../components/TitleBar";
 import Name from "../../images/Name.png";
 import Footer from "../../components/Footer";
 import ButtonGeneric from "../../components/ButtonGeneric";
+import MenuBar from "../../components/MenuBar";
 
 const PhotoEditing = () => {
     // Setup, needed to make the PDF display work at all
@@ -38,6 +39,7 @@ const PhotoEditing = () => {
         <div className={"App"}>
             <TitleBar  logo={Name}></TitleBar>
             <div className={"page_content"}>
+                <MenuBar></MenuBar>
                 <p className={"page_object"}>
                     <ButtonGeneric label={"Back"} dest={document.referrer}></ButtonGeneric>
                 </p>

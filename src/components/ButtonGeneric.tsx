@@ -3,19 +3,21 @@ import { Link } from "react-router-dom";
 
 interface labelInfo {
     label: string;
-    dest: string;
+    dest: string | object;
 }
 const ButtonGeneric = ({
     label,
     dest,
                        }: labelInfo) => {
 
+
+
     return (
-        <a href={dest}>
-        <div className={"genericButton"}>
+        <Link to={dest}>
+        <div className={"genericButton"} onClick={() => {window.scrollTo(0, 0);}}>
             {label}
         </div>
-        </a>
+        </Link>
     )
 };
 

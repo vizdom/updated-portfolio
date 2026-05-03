@@ -1,5 +1,6 @@
 import './Components.css'
 import '../App.css'
+import {Link} from "react-router-dom";
 
 interface textInfo {
     img1Src: string;
@@ -8,8 +9,8 @@ interface textInfo {
     alt2: string;
     title1: string;
     title2: string;
-    link1?: string;
-    link2?: string;
+    link1?: string | object;
+    link2?: string | object;
 }
 const DoubleImage = ({
                         img1Src,
@@ -18,25 +19,31 @@ const DoubleImage = ({
                         alt2,
                         title1,
                         title2,
-                        link1,
-                        link2,
+                        link1 = {},
+                        link2 = {},
                     }: textInfo) => {
 
     return (
         <div className={"page_object"}>
             <div className={"double_image_container"}>
-                <a href={link1}>
+
+
                     <div className={"double_image_item"}>
-                        <div className={"double_image_title"}>{title1}</div>
-                        <img src={img1Src} alt={alt1} className={"double_image"}/>
+                        <Link className={"link_style"} to={link1}>
+                            <div className={"text_title"}>{title1}</div>
+                        </Link>
+                        <Link className={"link_style"} to={link1}>
+                            <img src={img1Src} alt={alt1} className={"double_image"}/>
+                        </Link>
                     </div>
-                </a>
-                <a href={link2}>
                     <div className={"double_image_item"}>
-                        <div className={"double_image_title"}>{title2}</div>
-                        <img src={img2Src} alt={alt2} className={"double_image"}/>
+                        <Link className={"link_style"} to={link2}>
+                            <div className={"text_title"}>{title2}</div>
+                        </Link>
+                        <Link className={"link_style"} to={link2}>
+                            <img src={img2Src} alt={alt2} className={"double_image"}/>
+                        </Link>
                     </div>
-                </a>
             </div>
         </div>
     )

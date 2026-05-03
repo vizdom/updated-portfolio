@@ -1,6 +1,6 @@
 import './Components.css'
-import MenuBar from "./MenuBar";
 import React from "react";
+import {Link} from "react-router-dom";
 interface titleInfo {
     logo: string;
 }
@@ -11,14 +11,11 @@ const TitleBar = ({
     return (
         <div className={"title"}>
             <div className={"title_image"}>
-                <a href={"/"}>
                 <div className={"title_centered"}>
+                    <Link to={"/"}>
                     <img className={"logo"} src={logo} alt={"Owen Lacey"}/>
+                    </Link>
                 </div>
-                </a>
-            </div>
-            <div className={"menu_box"}>
-                <MenuBar></MenuBar>
             </div>
         </div>
     )

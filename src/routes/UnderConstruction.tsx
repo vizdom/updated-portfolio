@@ -5,6 +5,7 @@ import ParagraphText from "../components/ParagraphText";
 import Name from "../images/Name.png";
 import Footer from "../components/Footer";
 import ButtonGeneric from "../components/ButtonGeneric";
+import MenuBar from "../components/MenuBar";
 
 
 const UnderConstruction = () => {
@@ -13,6 +14,7 @@ const UnderConstruction = () => {
         <div className={"App"}>
             <TitleBar  logo={Name}></TitleBar>
             <div className={"page_content"}>
+                <MenuBar></MenuBar>
                 <div className={"page_object"}>
                     <ButtonGeneric label={"Back"} dest={document.referrer}></ButtonGeneric>
                 </div>

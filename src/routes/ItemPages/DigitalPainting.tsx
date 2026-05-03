@@ -1,5 +1,5 @@
 import "../../App.css";
-import React from "react";
+import React, {useEffect, useLayoutEffect} from "react";
 import {useState} from "react";
 import {Document, Page, pdfjs} from "react-pdf";
 import PaintingPDF from "../../PDFs/Owen_Lacey_DigitalPainting_Portfolio_2022.pdf"
@@ -8,7 +8,11 @@ import TitleBar from "../../components/TitleBar";
 import Name from "../../images/Name.png";
 import Footer from "../../components/Footer";
 import ButtonGeneric from "../../components/ButtonGeneric";
-import ParagraphText from "../../components/ParagraphText";
+import Spacer from "../../components/Spacer";
+import MenuBar from "../../components/MenuBar";
+
+import "react-pdf/dist/Page/AnnotationLayer.css";
+import "react-pdf/dist/Page/TextLayer.css";
 
 const DigitalPainting = () => {
     // Setup, needed to make the PDF display work at all
@@ -17,9 +21,14 @@ const DigitalPainting = () => {
         import.meta.url,
     ).toString();
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     // First PDF Functions and Variables
     const [numPagesA, setNumPagesA] = useState<number>(0);
     const [pageNumberA, setPageNumberA] = useState<number>(1);
+
     function onDocumentLoadSuccessA({ numPages }: { numPages: number }): void {
         setNumPagesA(numPages);
     }
@@ -49,17 +58,49 @@ const DigitalPainting = () => {
         changePageB(1);
     }
 
+    function useWindowSize() {
+        const [size, setSize] = useState(0);
+        useLayoutEffect(() => {
+            function updateSize() {
+                setSize(window.innerWidth);
+            }
+            window.addEventListener('resize', updateSize);
+            updateSize();
+            return () => window.removeEventListener('resize', updateSize);
+        }, []);
+        return size;
+    }
+
+    function PDFPageA () {
+        const width = useWindowSize();
+        if(width * 0.76 > 1100) {
+            return <Page width={1100} pageNumber={pageNumberA}></Page>;
+        }
+        return <Page width={width * 0.76} pageNumber={pageNumberA}></Page>;
+    }
+
+    function PDFPageB () {
+        const width = useWindowSize();
+        if(width * 0.76 > 1100) {
+            return <Page width={1100} pageNumber={pageNumberB}></Page>;
+        }
+        return <Page width={width * 0.76} pageNumber={pageNumberB}></Page>;
+    }
+
+
     return (
         <div className={"App"}>
             <TitleBar  logo={Name}></TitleBar>
             <div className={"page_content"}>
+                <MenuBar></MenuBar>
                 <div className={"page_object"}>
                     <ButtonGeneric label={"Back"} dest={"/visualart"}></ButtonGeneric>
                 </div>
-                <div className={"pdf_display_block"}>
+                <div className={"page_object"}>
                 <Document file={PaintingPDF} onLoadError={console.error}
                           onLoadSuccess={onDocumentLoadSuccessA}>
-                    <Page pageNumber={pageNumberA} renderTextLayer={false} renderAnnotationLayer={false}></Page>
+                    <PDFPageA></PDFPageA>
+                    {/*<Page width={1100} pageNumber={pageNumberA}></Page>*/}
                 </Document>
                 </div>
                 <div className={"page_object"}>
@@ -85,12 +126,12 @@ const DigitalPainting = () => {
                         </button>
                     </div>
                 </div>
-                <p className={"page_object"}>​</p>
+                <Spacer count={2}></Spacer>
                 {/*Start of PDF B - Concept Art*/}
-                <div className={"pdf_display_block"}>
+                <div className={"page_object"}>
                 <Document className={'pdf_display'} file={ConceptPDF} onLoadError={console.error}
                           onLoadSuccess={onDocumentLoadSuccessB}>
-                    <Page pageNumber={pageNumberB} renderTextLayer={false} renderAnnotationLayer={false}></Page>
+                    <PDFPageB></PDFPageB>
                 </Document>
                 </div>
                 <div className={"page_object"}>
@@ -116,8 +157,7 @@ const DigitalPainting = () => {
                         </button>
                     </div>
                 </div>
-                <p className={"page_object"}>​</p>
-                <ParagraphText title={"Painting Information"} text={"I should write something here"}></ParagraphText>
+                <Spacer count={1}></Spacer>
             </div>
             <Footer imgSrc={Name} alt={"Name Logo"}></Footer>
         </div>
