@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/updated-portfolio/static/css/main.a9697c6b.css",
-    "main.js": "/updated-portfolio/static/js/main.d6266be2.js",
+    "main.js": "/updated-portfolio/static/js/main.02aff841.js",
     "static/js/453.8fab85aa.chunk.js": "/updated-portfolio/static/js/453.8fab85aa.chunk.js",
     "static/media/MinecraftPortfolioV2.pdf": "/updated-portfolio/static/media/MinecraftPortfolioV2.295963a7980af50ad728.pdf",
     "static/media/Owen_Lacey_ConceptArt_Portfolio_Fall2024.pdf": "/updated-portfolio/static/media/Owen_Lacey_ConceptArt_Portfolio_Fall2024.a9c80b372aea2f48b549.pdf",
@@ -32,11 +32,11 @@
     "static/media/AlienAdventure.png": "/updated-portfolio/static/media/AlienAdventure.e11aa5a4d084bfb2b40e.png",
     "index.html": "/updated-portfolio/index.html",
     "main.a9697c6b.css.map": "/updated-portfolio/static/css/main.a9697c6b.css.map",
-    "main.d6266be2.js.map": "/updated-portfolio/static/js/main.d6266be2.js.map",
+    "main.02aff841.js.map": "/updated-portfolio/static/js/main.02aff841.js.map",
     "453.8fab85aa.chunk.js.map": "/updated-portfolio/static/js/453.8fab85aa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a9697c6b.css",
-    "static/js/main.d6266be2.js"
+    "static/js/main.02aff841.js"
   ]
 }
