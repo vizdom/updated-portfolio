@@ -73,7 +73,7 @@ const router = createBrowserRouter([
         path: "/gamedesign/shadowdepth",
         element: <GameDesign />,
     },
-]);
+], {basename: '/updated-portfolio/'});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
